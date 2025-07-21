@@ -358,6 +358,7 @@ const SuccessStoryForm: React.FC<SuccessStoryFormProps> = ({ isOpen, onClose, ed
                   <option value="AgriTech">AgriTech</option>
                   <option value="DeepTech">DeepTech</option>
                   <option value="Robotics">Robotics</option>
+                  <option value="Waste Management">Waste Management</option>
                   <option value="Pink Zone">Pink Zone</option>
                   <option value="Campus Startups">Campus Startups</option>
                   <option value="Other">Other</option>

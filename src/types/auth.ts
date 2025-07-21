@@ -80,7 +80,7 @@ export interface SuccessStory {
   email: string;
   webAddress?: string;
   linkedinProfile?: string;
-  innovationCategory: 'EdTech' | 'FinTech' | 'AgriTech' | 'DeepTech' | 'Robotics' | 'Pink Zone' | 'Campus Startups' | 'Other';
+  innovationCategory: 'EdTech' | 'FinTech' | 'AgriTech' | 'DeepTech' | 'Robotics' | 'Waste Management' | 'Pink Zone' | 'Campus Startups' | 'Other';
   yearOfInnovation: string;
   editedBy: string;
   inventorPhoto?: string;

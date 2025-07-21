@@ -113,6 +113,8 @@ const AllSuccessStories = () => {
           matchesFilter = story.innovationCategory === 'AgriTech';
         } else if (selectedFilter === 'deeptech') {
           matchesFilter = story.innovationCategory === 'DeepTech';
+        } else if (selectedFilter === 'waste-management') {
+          matchesFilter = story.innovationCategory === 'Waste Management';
         } else {
           matchesFilter = story.innovationCategory === selectedFilter;
         }
@@ -129,6 +131,7 @@ const AllSuccessStories = () => {
     { value: 'AgriTech', label: 'AgriTech' },
     { value: 'DeepTech', label: 'DeepTech' },
     { value: 'Robotics', label: 'Robotics' },
+    { value: 'Waste Management', label: 'Waste Management' },
     { value: 'pink-zone', label: 'Pink Zone' },
     { value: 'campus-startups', label: 'Campus Startups' },
     { value: 'Other', label: 'Other' }

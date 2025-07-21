@@ -83,12 +83,27 @@ const Header: React.FC<HeaderProps> = ({ onLoginClick, onSignupClick }) => {
     window.dispatchEvent(new CustomEvent('categorySelect', { detail: category }));
   };
 
+  const handleSuccessStoriesClick = () => {
+    // If not on home page, navigate to home first
+    if (window.location.pathname !== '/') {
+      navigate('/', { state: { scrollTo: 'success-stories' } });
+    } else {
+      // If on home page, scroll to section
+      const element = document.getElementById('success-stories');
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+    setIsSuccessStoriesOpen(false);
+  };
+
   const successStoriesCategories = [
     { value: 'EdTech', label: 'EdTech' },
     { value: 'FinTech', label: 'FinTech' },
     { value: 'AgriTech', label: 'AgriTech' },
     { value: 'DeepTech', label: 'DeepTech' },
     { value: 'Robotics', label: 'Robotics' },
+    { value: 'Waste Management', label: 'Waste Management' },
     { value: 'pink-zone', label: 'Pink Zone' },
     { value: 'campus-startups', label: 'Campus Startups' }
   ];
@@ -176,6 +191,12 @@ const Header: React.FC<HeaderProps> = ({ onLoginClick, onSignupClick }) => {
                     {/* Success Stories Dropdown */}
                     {isSuccessStoriesOpen && (
                       <div className="absolute top-full left-0 mt-2 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                        <button
+                          onClick={handleSuccessStoriesClick}
+                          className="block w-full text-left px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"
+                        >
+                          View Success Stories Section
+                        </button>
                         <Link
                           to="/success-stories"
                           className="block px-4 py-2 text-gray-700 hover:bg-purple-50 hover:text-purple-600 transition-colors"

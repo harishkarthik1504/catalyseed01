@@ -61,7 +61,7 @@ const Testimonials = () => {
   };
 
   return (
-    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600">
+    <section id="testimonials" className="py-12 sm:py-16 lg:py-20 bg-gradient-to-br from-purple-600 via-purple-700 to-pink-600 relative">
       {/* Under Construction Overlay */}
       <div className="absolute inset-0 bg-black/20 backdrop-blur-[1px] z-10 flex items-center justify-center">
         <div className="bg-white/95 backdrop-blur-sm rounded-2xl p-8 shadow-2xl border border-gray-200 text-center max-w-md mx-4">
@@ -79,7 +79,7 @@ const Testimonials = () => {
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8">
+      <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-8 relative">
         <div className="text-center mb-8 sm:mb-12 lg:mb-16">
           <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-2 sm:mb-4">
             What Ecosystem Enablers Say

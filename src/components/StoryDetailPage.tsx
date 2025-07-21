@@ -335,6 +335,28 @@ const StoryDetailPage = () => {
               </div>
             </div>
 
+            {/* AI Verdict Section */}
+            {story.aiVerdict && (
+              <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-xl p-6 border border-blue-200 mb-8">
+                <div className="flex items-center space-x-3 mb-4">
+                  <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-indigo-600 rounded-xl flex items-center justify-center">
+                    <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 24 24">
+                      <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-blue-900">AI Verdict</h3>
+                    <p className="text-blue-700 text-sm">Expert assessment and recommendation</p>
+                  </div>
+                </div>
+                <div className="bg-white/70 rounded-lg p-4 border border-blue-200">
+                  <p className="text-blue-900 leading-relaxed font-medium">
+                    {story.aiVerdict}
+                  </p>
+                </div>
+              </div>
+            )}
+
             {/* Funding Details */}
             {story.fundRaisedDetails && (
               <div className="bg-white rounded-2xl shadow-lg p-6 sm:p-8">

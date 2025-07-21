@@ -83,6 +83,7 @@ export interface SuccessStory {
   innovationCategory: 'EdTech' | 'FinTech' | 'AgriTech' | 'DeepTech' | 'Robotics' | 'Waste Management' | 'Pink Zone' | 'Campus Startups' | 'Other';
   yearOfInnovation: string;
   editedBy: string;
+  aiVerdict?: string;
   inventorPhoto?: string;
   productServicePictures: string[];
   aboutStartup: string;

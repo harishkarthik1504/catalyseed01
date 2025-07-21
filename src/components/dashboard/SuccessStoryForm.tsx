@@ -28,6 +28,7 @@ const SuccessStoryForm: React.FC<SuccessStoryFormProps> = ({ isOpen, onClose, ed
     innovationCategory: 'EdTech',
     yearOfInnovation: '',
     editedBy: 'Dr. G. S. Mahalakshmi',
+    aiVerdict: '',
     aboutStartup: '',
     currentStage: '',
     fundRaisedDetails: '',
@@ -73,6 +74,7 @@ const SuccessStoryForm: React.FC<SuccessStoryFormProps> = ({ isOpen, onClose, ed
           innovationCategory: editingStory.innovationCategory || 'EdTech',
           yearOfInnovation: editingStory.yearOfInnovation || '',
           editedBy: editingStory.editedBy || 'Dr. G. S. Mahalakshmi',
+          aiVerdict: editingStory.aiVerdict || '',
           aboutStartup: editingStory.aboutStartup || '',
           currentStage: editingStory.currentStage || '',
           fundRaisedDetails: editingStory.fundRaisedDetails || '',
@@ -528,6 +530,22 @@ const SuccessStoryForm: React.FC<SuccessStoryFormProps> = ({ isOpen, onClose, ed
                 className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
                 required
               />
+            </div>
+
+            <div>
+              <label className="block text-sm font-medium text-gray-700 mb-2">
+                AI Verdict
+              </label>
+              <textarea
+                value={formData.aiVerdict}
+                onChange={(e) => handleInputChange('aiVerdict', e.target.value)}
+                rows={3}
+                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-purple-500"
+                placeholder="AI-generated assessment and verdict about this startup..."
+              />
+              <p className="text-xs text-gray-500 mt-1">
+                This field will be displayed prominently on the success story detail page
+              </p>
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
